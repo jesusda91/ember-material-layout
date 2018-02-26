@@ -2,20 +2,34 @@
 	.user-avatar {
 		width: 48px;
 		height: 48px;
+		margin-bottom: 12px;
 		border-radius: 24px;
 	}
 	.header-navbar {
 		box-sizing: border-box;
-		@include flexbox();
+		@include align-vertical();
 		@include flex-direction(column);
 		@include justify-content(flex-end);
-		padding: 16px;
-		height: 151px;
+		padding: 0 16px 16px;
+		.logo {
+			height: 52px;
+			margin: 6px 0 12px;
+		}
+		.avatar-dropdown {
+			@include flex-center();
+			@include flex-direction(row);
+			position: relative;
+			width: 100%;
+			min-width: 135px;
+			.user-text {
+				text-align: center;
+				@include flex(1);
+			}
+		}
 	}
-	.avatar-dropdown {
-		@include align-vertical();
-		@include flex-direction(row);
-		position: relative;
-		width: 100%;
+	.mdl-navigation__link {
+		color: white !important;
 	}
 }
+
+
