@@ -1,0 +1,40 @@
+.layout {
+	.mdl-layout__header .mdl-layout__drawer-button {
+		color: rgba(0, 0, 0, 0.54);
+	}
+	.layout-navigation {
+		-webkit-flex-grow: 1;
+		-ms-flex-positive: 1;
+		flex-grow: 1;
+		.mdl-navigation__link {
+			@include align-vertical();
+			@include flex-direction(row);
+			color: rgba(255, 255, 255, 0.56);
+			font-weight: 500;
+		}
+		.mdl-navigation__link:hover {
+			background-color: #00BCD4;
+			color: #37474F;
+		}
+		.mdl-navigation__link .material-icons {
+			font-size: 24px;
+			color: rgba(255, 255, 255, 0.56);
+			margin-right: 32px;
+		}
+	}
+	.layout-drawer {
+		border: none;
+		.layout-navigation {
+			z-index: -2;
+		}
+		.mdl-menu__container {
+			z-index: -1;
+		}
+		.mdl-menu .mdl-menu__item {
+			@include align-vertical();
+		}
+	}
+	.layout-content {
+		max-width: 1080px;
+	}
+}
